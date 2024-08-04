@@ -5,9 +5,10 @@ const home = {
 
 var map = L.map('map').setView([home.latitude, home.longitude], 13);
 
+
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="https://wixieyy.github.io/LinkTree-Clone/">Wixiey</a>'
+    attribution: '<a href="https://github.com/Wixieyy"><img src="../img/curacao.png" width="12px" style="padding-right: 3px"><img src="../img/netherlands.png" width="12px" style="padding-right: 3px">Wixiey</a>',
 }).addTo(map);
 
 var marker = L.marker([home.latitude, home.longitude]).addTo(map);
