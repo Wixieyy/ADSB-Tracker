@@ -1,12 +1,29 @@
-/*scale with zoom or width*/
+body {
+    margin: 0;
+}
+
 #map {
     width: 100%;
-    height: 93%;
-    border-top: 0.5vh solid black;
+    height: 93.5%;
 
-    /*dynamically center in middle of screen*/
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 7%);
+    transform: translate(-50%, 6.98%);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    height: 6.5vh;
+    background-color: rgba(18, 18, 18, 0.95);
+}
+
+#titleh2 {
+    font-size: 3vh;
+    margin: auto 0;
+    padding-left: 2vw;
+    justify-items: center;
+    color: whitesmoke;
 }
