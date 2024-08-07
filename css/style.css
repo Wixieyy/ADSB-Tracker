@@ -59,12 +59,27 @@ body {
     transform: translate(-50%, 6.98%);
 }
 
-#navbar {
+.navbar {
     display: flex;
     justify-content: space-between;
     padding: 0;
     height: 6.5vh;
     background-color: rgba(18, 18, 18, 0.95);
+}
+
+#titlebox {
+    display: flex;
+    background-color: lightgreen;
+}
+
+#buttonbox {
+    display: flex;
+    background-color: lightpink;
+}
+
+#socialsbox {
+    display: flex;
+    background-color: indianred;
 }
 
 #titleh2 {
