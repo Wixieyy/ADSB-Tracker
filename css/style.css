@@ -85,7 +85,7 @@ body {
 #titleh2 {
     font-size: 3vh;
     margin: auto 0;
-    padding-left: 2vw;
+    padding:  0.5vw;
     justify-items: center;
     color: whitesmoke;
 }

@@ -8,24 +8,33 @@ const loc = {
 }
 
 fetchSingleClosestAircraft()
+setTimeout(multipleClosestAircraft, 5000);
 
 async function fetchSingleClosestAircraft() {
-    const url = 'https://corsproxy.io/?' + encodeURIComponent('https://opendata.adsb.fi/api/v2/lat/52.5105/lon/6.0946/dist/25');
-
+    const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api.adsb.lol/v2/closest/52.5105/6.0946/25');
     const response = await fetch(url);
 
     if (!response.ok) {
-        throw new Error("Could not fetch data");
+        throw new Error("Could not fetch any data");
     }
 
     const data = await response.json();
-
-    const flight = data.aircraft[0]?.flight;
+    const flight = data.ac[0]?.flight;
 
     console.log(flight);
 }
 
-function multipleClosestAircraft() {
-    // https://api.adsb.lol/v2/lat/52.5105/lon/6.0946/dist/25
+async function multipleClosestAircraft() {
+    const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api.adsb.lol/v2/point/52.5105/6.0946/25');
+    const response = await fetch(url);
 
+    if (!response.ok) {
+        throw new Error("Could not fetch any data")
+    }
+
+    const datamultiple = await response.json()
+
+    for (let i = 0; i < datamultiple.ac.length; i++) {
+        console.log(datamultiple.ac[i]?.flight);
+    }
 }
