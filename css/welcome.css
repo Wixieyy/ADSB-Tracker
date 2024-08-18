@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    width: 35vw;
+    height: 35vh;
+    /*justify-content: center;*/
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#boxtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    background-color: green;
+}
+
+#boxtext {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+#boxbutton {
+    display: flex;
+    width: 8vw;
+    height: 5vh;
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

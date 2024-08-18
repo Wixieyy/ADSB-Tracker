@@ -15,7 +15,7 @@ async function fetchSingleClosestAircraft() {
     const response = await fetch(url);
 
     if (!response.ok) {
-        throw new Error("Could not fetch any data");
+        throw new Error("Could not fetch any data - Single");
     }
 
     const data = await response.json();
@@ -29,7 +29,7 @@ async function multipleClosestAircraft() {
     const response = await fetch(url);
 
     if (!response.ok) {
-        throw new Error("Could not fetch any data")
+        throw new Error("Could not fetch any data - Multi")
     }
 
     const datamultiple = await response.json()
