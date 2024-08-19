@@ -1,34 +1,88 @@
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+* {
+    font-family: Merriweather,sans-serif;
+    user-select: none;
+}
+
 body {
     margin: 0;
+    background-color: rgba(18, 18, 18, 0.95);
 }
 
 .box {
     display: flex;
     flex-direction: column;
-    background-color: red;
-    width: 35vw;
-    height: 35vh;
+    background-color: rgba(10,10,10,95%);
+    width: auto;
+    height: auto;
     /*justify-content: center;*/
     margin: 0;
-    padding: 0;
+    padding: 25px 50px;
 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 1vw;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #797979;
 }
 
 #boxtitle {
     display: flex;
     justify-content: center;
     font-size: 3em;
-    background-color: green;
+    /*background-color: green;*/
+    margin: 0 auto;
+    color: whitesmoke;
 }
 
 #boxtext {
     display: flex;
     justify-content: center;
     font-size: 1.5em;
+    margin: 5px auto 10px auto;
 }
 
 #boxbutton {
@@ -39,4 +93,23 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
+}
+
+p {
+    text-align: center;
+    color: whitesmoke;
+}
+
+#textabout {
+    margin: 0;
+}
+
+#textbuilt {
+    margin: 15px auto;
+}
+
+a, a:active, a:hover, a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: blue;
 }
