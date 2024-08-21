@@ -61,7 +61,7 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     padding: 0;
     height: 6.5vh;
     background-color: rgba(18, 18, 18, 0.95);
@@ -69,23 +69,70 @@ body {
 
 #titlebox {
     display: flex;
-    background-color: lightgreen;
+    background-color: #a9a9a9;
+    font-weight: bold;
+    padding: 0 0.5vw;
+    user-select: none;
+}
+
+#titlebox a {
+    text-decoration: none;
 }
 
 #buttonbox {
     display: flex;
-    background-color: lightpink;
+    /*background-color: lightpink;*/
+    align-items: center;
 }
 
 #socialsbox {
     display: flex;
-    background-color: indianred;
+    /*background-color: green;*/
+    margin-left: auto;
+    margin-right: 0.8vw;
+    height: 100%;
+    align-items: center;
 }
 
-#titleh2 {
-    font-size: 3vh;
+#socialsbox a {
+    padding: 0.25vw;
+    margin: 0 0.2vw;
+    /*background-color: red;*/
+}
+
+#titlelink {
+    font-size: 3.5vh;
     margin: auto 0;
-    padding:  0.5vw;
+    padding:  0.25vw 0;
     justify-items: center;
     color: whitesmoke;
+    /*background-color: red;*/
+}
+
+#buttonbox a {
+    color: whitesmoke;
+    font-size: 1.5em;
+    text-decoration: none;
+    justify-content: center;
+    align-content: center;
+    margin: 0.5vw;
+    padding: 0 0.25vw;
+    /*background-color: blue;*/
+}
+
+#buttonbox a:nth-child(1) {
+    margin-left: 2vw;
+}
+
+.fa-brands.fa-discord.fa-2x {
+    color: #7289da;
+}
+.fa-brands.fa-github.fa-2x {
+    color: #e8eaea;
+}
+.fa-brands.fa-stack-overflow.fa-2x {
+    color: #F47F24;
+}
+.fa-solid.fa-envelope.fa-2x {
+    color: #e3e3e3;
 }

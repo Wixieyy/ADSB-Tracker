@@ -85,11 +85,11 @@ body {
     margin: 5px auto 10px auto;
 }
 
-#boxbutton {
+#boxbutton, #boxlink {
     display: flex;
     width: 8vw;
     height: 5vh;
-    font-size: 1.5em;
+    font-size: 1.25em;
     justify-content: center;
     align-items: center;
     margin: auto;
