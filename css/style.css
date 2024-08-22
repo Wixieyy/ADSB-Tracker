@@ -116,12 +116,12 @@ body {
     justify-content: center;
     align-content: center;
     margin: 0.5vw;
-    padding: 0 0.25vw;
+    padding: 0 0.5vw;
     /*background-color: blue;*/
 }
 
 #buttonbox a:nth-child(1) {
-    margin-left: 2vw;
+    margin-left: 1.25vw;
 }
 
 .fa-brands.fa-discord.fa-2x {
@@ -135,4 +135,20 @@ body {
 }
 .fa-solid.fa-envelope.fa-2x {
     color: #e3e3e3;
+}
+
+#singleaircraft {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    padding: 10px;
+    z-index: 400;
+}
+
+#multiaircraft {
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    padding: 10px;
+    z-index: 400;
 }
