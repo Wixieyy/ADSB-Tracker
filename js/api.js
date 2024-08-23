@@ -7,10 +7,7 @@ const loc = {
     radius: 25
 }
 
-fetchSingleClosestAircraft()
-setTimeout(multipleClosestAircraft, 5000);
-
-async function fetchSingleClosestAircraft() {
+export async function fetchSingleClosestAircraft() {
     const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api.adsb.lol/v2/closest/52.5105/6.0946/25');
     const response = await fetch(url);
 
@@ -19,12 +16,10 @@ async function fetchSingleClosestAircraft() {
     }
 
     const data = await response.json();
-    const flight = data.ac[0]?.flight;
-
-    console.log(flight);
+    return data.ac[0]?.flight;
 }
 
-async function multipleClosestAircraft() {
+export async function multipleClosestAircraft() {
     const url = 'https://corsproxy.io/?' + encodeURIComponent('https://api.adsb.lol/v2/point/52.5105/6.0946/25');
     const response = await fetch(url);
 
@@ -34,7 +29,5 @@ async function multipleClosestAircraft() {
 
     const datamultiple = await response.json()
 
-    for (let i = 0; i < datamultiple.ac.length; i++) {
-        console.log(datamultiple.ac[i]?.flight);
-    }
+    return datamultiple;
 }

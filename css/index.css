@@ -139,16 +139,18 @@ body {
 
 #singleaircraft {
     position: absolute;
-    top: 10%;
-    right: 2%;
-    padding: 10px;
+    top: 5vw;
+    right: 1vw;
+    padding: 0.5vw;
     z-index: 400;
+    font-weight: bold;
 }
 
 #multiaircraft {
     position: absolute;
-    top: 10%;
-    right: 6%;
-    padding: 10px;
+    top: 5vw;
+    right: 5vw;
+    padding: 0.5vw;
     z-index: 400;
+    font-weight: bold;
 }
