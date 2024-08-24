@@ -3,7 +3,7 @@ const home = {
     longitude: 6.0946
 }
 
-var map = L.map('map').setView([home.latitude, home.longitude], 13);
+var map = L.map('map').setView([home.latitude, home.longitude], 9);
 
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -17,6 +17,8 @@ var circle = L.circle([home.latitude, home.longitude], {
     color: 'blue',
     radius: 50000
 }).addTo(map);
+
+
 
 // var cone = L.polygon ([
 //     [52.5105, 6.0946], /*home*/
