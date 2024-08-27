@@ -57,6 +57,7 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%, 6.98%);
+    filter: blur(0px);
 }
 
 .navbar {
@@ -153,4 +154,12 @@ body {
     padding: 10px 10px;
     z-index: 400;
     font-weight: bold;
+}
+
+.about p {
+    position: absolute;
+    z-index: 400;
+    top: 50vh;
+    right: 50vw;
+
 }

@@ -39,3 +39,10 @@ multiButton.addEventListener('click', async() => {
         console.error("Error fetching multiple closest aircraft:", error);
     }
 });
+
+const aboutButton = document.getElementById('button2')
+const map = document.getElementById('map')
+
+function onAboutButtonClick() {
+    map.style.filter = 'blur(2px)'
+}
