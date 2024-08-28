@@ -60,6 +60,19 @@ body {
     filter: blur(0px);
 }
 
+#map-overlay {
+    position: absolute;
+    top: 6.5vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    pointer-events: none;
+    z-index: 100;
+    display: none;
+}
+
 .navbar {
     display: flex;
     /*justify-content: space-between;*/
@@ -156,10 +169,61 @@ body {
     font-weight: bold;
 }
 
-.about p {
+.about {
     position: absolute;
-    z-index: 400;
-    top: 50vh;
-    right: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(246, 246, 246);
+    padding: 20px 20px 0 0;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    border: 5px solid darkgray;
+    border-radius: 30px;
+    display: flow-root;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 5000;
+}
 
+#aboutpic {
+    float: left;
+    height: 500px;
+    padding-right: 20px;
+    user-select: none;
+}
+
+.about h1 {
+    font-size: 40px;
+}
+.about h2 {
+    margin-top: -2vh;
+}
+.about h3 {
+    font-weight: initial;
+    text-align: left;
+}
+.about p {
+    font-weight: lighter;
+    margin: 0 40px 20px 40px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.social-icons i {
+    margin: 0 0.25vw 0.25vw 0.25vw;
+}
+.fa-brands.fa-discord.fa-3x {
+    color: #7289da;
+}
+.fa-brands.fa-github.fa-3x {
+    color: #24292e;
+}
+.fa-brands.fa-stack-overflow.fa-3x {
+    color: #F47F24;
+}
+.fa-solid.fa-envelope.fa-3x {
+    color: #6b6b70;
 }

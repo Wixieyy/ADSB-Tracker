@@ -42,7 +42,20 @@ multiButton.addEventListener('click', async() => {
 
 const aboutButton = document.getElementById('button2')
 const map = document.getElementById('map')
+const mapOverlay = document.getElementById('map-overlay')
+const aboutBox = document.getElementById('about')
+let aboutCheck = 0;
 
-function onAboutButtonClick() {
-    map.style.filter = 'blur(2px)'
-}
+aboutButton.addEventListener('click', () => {
+    if (aboutCheck === 0) {
+        mapOverlay.style.display = 'block'
+        map.style.pointerEvents = 'none'
+        aboutBox.style.opacity = '1'
+        aboutCheck = 1;
+    } else {
+        mapOverlay.style.display = 'none';
+        map.style.pointerEvents = 'auto'
+        aboutBox.style.opacity = '0'
+        aboutCheck = 0;
+    }
+});

@@ -11,11 +11,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '<a href="https://github.com/Wixieyy"><img src="../img/curacao.png" width="12px" style="padding-right: 3px"><img src="../img/netherlands.png" width="12px" style="padding-right: 3px">Wixiey</a>',
 }).addTo(map);
 
-var marker = L.marker([home.latitude, home.longitude]).addTo(map);
+var marker = L.marker([home.latitude, home.longitude], {
+    interactive: false
+}).addTo(map);
 
 var circle = L.circle([home.latitude, home.longitude], {
     color: 'blue',
-    radius: 50000
+    radius: 50000,
+    interactive: false
 }).addTo(map);
 
 
