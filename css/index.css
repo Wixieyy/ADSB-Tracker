@@ -39,8 +39,6 @@
     font-style: italic;
 }
 
-
-
 * {
     font-family: Merriweather,sans-serif;
 }
@@ -52,7 +50,6 @@ body {
 #map {
     width: 100%;
     height: 93.5%;
-
     position: absolute;
     top: 0;
     left: 50%;
@@ -67,18 +64,20 @@ body {
     width: 100%;
     height: 100%;
     background: transparent;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(0px); /* Start with no blur */
     pointer-events: none;
     z-index: 100;
-    display: none;
+    display: block; /* Change to block to ensure it's always active */
+    opacity: 0;
+    transition: backdrop-filter 0.5s ease, opacity 0.5s ease; /* Add transitions */
 }
 
 .navbar {
     display: flex;
-    /*justify-content: space-between;*/
     padding: 0;
     height: 6.5vh;
     background-color: rgba(18, 18, 18, 0.95);
+    user-select: none;
 }
 
 #titlebox {
@@ -95,23 +94,21 @@ body {
 
 #buttonbox {
     display: flex;
-    /*background-color: lightpink;*/
     align-items: center;
 }
 
 #socialsbox {
     display: flex;
-    /*background-color: green;*/
     margin-left: auto;
     margin-right: 0.8vw;
     height: 100%;
     align-items: center;
+    user-select: auto;
 }
 
 #socialsbox a {
     padding: 0.25vw;
     margin: 0 0.2vw;
-    /*background-color: red;*/
 }
 
 #titlelink {
@@ -120,7 +117,6 @@ body {
     padding:  0.25vw 0;
     justify-items: center;
     color: whitesmoke;
-    /*background-color: red;*/
 }
 
 #buttonbox a {
@@ -131,7 +127,6 @@ body {
     align-content: center;
     margin: 0.5vw;
     padding: 0 0.5vw;
-    /*background-color: blue;*/
 }
 
 #buttonbox a:nth-child(1) {
@@ -179,7 +174,7 @@ body {
     text-align: center;
     width: 100%;
     max-width: 1000px;
-    border: 5px solid darkgray;
+    border: 5px solid #313030;
     border-radius: 30px;
     display: flow-root;
     user-select: none;
@@ -215,6 +210,9 @@ body {
 .social-icons i {
     margin: 0 0.25vw 0.25vw 0.25vw;
 }
+.social-icons a {
+    pointer-events: auto;
+}
 .fa-brands.fa-discord.fa-3x {
     color: #7289da;
 }
@@ -225,5 +223,23 @@ body {
     color: #F47F24;
 }
 .fa-solid.fa-envelope.fa-3x {
-    color: #6b6b70;
+    color: #a6a6a9;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

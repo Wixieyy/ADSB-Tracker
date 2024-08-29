@@ -10,7 +10,7 @@ singleButton.addEventListener('click', async() => {
         if (singleResponse) {
             const { lat, lon, flight, altitude, heading } = singleResponse;
 
-            var aircraftMarker = L.marker([lat, lon]).addTo(map);
+            var aircraftMarker = L.marker([lat, lon]).addTo(leafletMap);
             aircraftMarker.bindPopup(`Flight: ${flight}<br>Altitude: ${altitude} ft<br>Heading: ${heading}°`).openPopup();
         } else {
             console.log("No aircraft data available");
@@ -29,7 +29,7 @@ multiButton.addEventListener('click', async() => {
                 const aircraft = multiResponse.ac[x];
                 const { lat, lon, flight, alt_baro, true_heading } = aircraft;
 
-                var aircraftMarker = L.marker([lat, lon]).addTo(map);
+                var aircraftMarker = L.marker([lat, lon]).addTo(leafletMap);
                 aircraftMarker.bindPopup(`Flight: ${flight}<br>Altitude: ${alt_baro} ft<br>Heading: ${true_heading}°`).openPopup();
             }
         } else {
@@ -48,14 +48,20 @@ let aboutCheck = 0;
 
 aboutButton.addEventListener('click', () => {
     if (aboutCheck === 0) {
-        mapOverlay.style.display = 'block'
-        map.style.pointerEvents = 'none'
-        aboutBox.style.opacity = '1'
         aboutCheck = 1;
+        mapOverlay.style.opacity = '1';
+        mapOverlay.style.backdropFilter = 'blur(3px)';
+        map.style.pointerEvents = 'none';
+        aboutBox.style.opacity = '1';
+        aboutBox.style.animationName = 'fadein';
+        aboutBox.style.animationDuration = '500ms';
     } else {
-        mapOverlay.style.display = 'none';
-        map.style.pointerEvents = 'auto'
-        aboutBox.style.opacity = '0'
         aboutCheck = 0;
+        mapOverlay.style.opacity = '0';
+        mapOverlay.style.backdropFilter = 'blur(0px)';
+        map.style.pointerEvents = 'auto';
+        aboutBox.style.opacity = '0';
+        aboutBox.style.animationName = 'fadeout';
+        aboutBox.style.animationDuration = '500ms';
     }
 });

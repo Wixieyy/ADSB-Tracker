@@ -3,24 +3,22 @@ const home = {
     longitude: 6.0946
 }
 
-var map = L.map('map').setView([home.latitude, home.longitude], 9);
-
+var leafletMap = L.map('map').setView([home.latitude, home.longitude], 9);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '<a href="https://github.com/Wixieyy"><img src="../img/curacao.png" width="12px" style="padding-right: 3px"><img src="../img/netherlands.png" width="12px" style="padding-right: 3px">Wixiey</a>',
-}).addTo(map);
+}).addTo(leafletMap);
 
 var marker = L.marker([home.latitude, home.longitude], {
     interactive: false
-}).addTo(map);
+}).addTo(leafletMap);
 
 var circle = L.circle([home.latitude, home.longitude], {
     color: 'blue',
     radius: 50000,
     interactive: false
-}).addTo(map);
-
+}).addTo(leafletMap);
 
 
 // var cone = L.polygon ([
