@@ -3,16 +3,23 @@ import * as api from './api.js';
 const singleButton = document.getElementById('singleaircraft');
 const multiButton = document.getElementById('multiaircraft');
 
+const aircraftType = {
+    B737: 'Boeing 737-700',
+    B738: 'Boeing 737-800',
+    B37M: 'Boeing 737 MAX 7',
+    B38M: 'Boeing 737 MAX 8',
+    B39M: 'Boeing 737 MAX 9'
+}
+
 singleButton.addEventListener('click', async() => {
     try {
         const singleResponse = await api.fetchSingleClosestAircraft();
 
         if (singleResponse) {
-            const { lat, lon, flight, altitude, heading } = singleResponse;
+            const { lat, lon, flight, altitude, heading, type, reg } = singleResponse;
 
             var aircraftMarker = L.marker([lat, lon]).addTo(leafletMap);
-            aircraftMarker.bindPopup(`Flight: ${flight}<br>Altitude: ${altitude} ft<br>Heading: ${heading}°`).openPopup();
-        } else {
+            aircraftMarker.bindPopup(`Flight: ${flight}<br>Type: ${aircraftType[type]}<br>Registration: ${reg}<br>Altitude: ${altitude} ft<br>Heading: ${heading}°`).openPopup();
             console.log("No aircraft data available");
         }
     } catch (error) {

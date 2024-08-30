@@ -17,7 +17,7 @@ export async function fetchSingleClosestAircraft() {
 
     const data = await response.json();
     const aircraft = data.ac[0];
-    return { lat: aircraft.lat, lon: aircraft.lon, flight: aircraft.flight, altitude: aircraft.alt_baro, heading: aircraft.true_heading };
+    return { lat: aircraft.lat, lon: aircraft.lon, flight: aircraft.flight, altitude: aircraft.alt_baro, heading: aircraft.true_heading, type: aircraft.t, reg: aircraft.r };
 }
 
 export async function multipleClosestAircraft() {
