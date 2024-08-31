@@ -4,11 +4,25 @@ const singleButton = document.getElementById('singleaircraft');
 const multiButton = document.getElementById('multiaircraft');
 
 const aircraftType = {
+    A19N: 'Airbus A319neo',
+    A20N: 'Airbus A320neo',
+    A21N: 'Airbus A321neo',
+    A318: 'Airbus A318',
+    A319: 'Airbus A319',
+    A320: 'Airbus A320',
+    A321: 'Airbus A321',
     B737: 'Boeing 737-700',
     B738: 'Boeing 737-800',
     B37M: 'Boeing 737 MAX 7',
     B38M: 'Boeing 737 MAX 8',
-    B39M: 'Boeing 737 MAX 9'
+    B39M: 'Boeing 737 MAX 9',
+    E170: 'Embraer E170',
+    E75L: 'Embraer E175 (long wing)',
+    E75S: 'Embraer E175 (short wing)',
+    E190: 'Embraer E190',
+    E195: 'Embraer E195',
+    E290: 'Embraer E190-E2',
+    E295: 'Embraer E195-E2',
 }
 
 singleButton.addEventListener('click', async() => {
