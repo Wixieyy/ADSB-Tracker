@@ -81,6 +81,7 @@ const aboutButton = document.getElementById('button2')
 const map = document.getElementById('map')
 const mapOverlay = document.getElementById('map-overlay')
 const aboutBox = document.getElementById('about')
+const socialIcons = document.getElementById('social-icons')
 let aboutCheck = 0;
 
 aboutButton.addEventListener('click', () => {
@@ -92,7 +93,11 @@ aboutButton.addEventListener('click', () => {
         aboutBox.style.opacity = '1';
         aboutBox.style.animationName = 'fadein';
         aboutBox.style.animationDuration = '500ms';
-    } else {
+        for (let i = 0; i < socialIcons.children.length; i++) {
+            socialIcons.children[i].style.pointerEvents = 'auto'
+        }
+    }
+    else {
         aboutCheck = 0;
         mapOverlay.style.opacity = '0';
         mapOverlay.style.backdropFilter = 'blur(0px)';
@@ -100,5 +105,10 @@ aboutButton.addEventListener('click', () => {
         aboutBox.style.opacity = '0';
         aboutBox.style.animationName = 'fadeout';
         aboutBox.style.animationDuration = '500ms';
+        for (let i = 0; i < socialIcons.children.length; i++) {
+            socialIcons.children[i].style.pointerEvents = 'none'
+        }
     }
 });
+
+
